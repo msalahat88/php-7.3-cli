@@ -49,7 +49,3 @@ RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
 
 RUN apt-get install -y supervisor
-
-RUN mkdir /supervisor
-
-RUN mkdir /var/log/supervisor
