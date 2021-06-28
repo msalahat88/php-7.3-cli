@@ -36,14 +36,8 @@ RUN docker-php-ext-configure zip --with-libzip && \
     docker-php-ext-install exif && \
     docker-php-ext-install gd && \
     docker-php-ext-install intl && \
-    docker-php-ext-enable mongodb
-
-RUN apt-get update -yy && \
-        apt-get upgrade -yy && \
-        apt-get install -yy --no-install-recommends \
-        imagemagick
-
-RUN docker-php-ext-enable imagick
+    docker-php-ext-enable mongodb && \
+    docker-php-ext-enable imagick
 
 RUN curl -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer
